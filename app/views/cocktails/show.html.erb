@@ -1,0 +1,7 @@
+<h1><%= @cocktail.name %></h1>
+
+<% @cocktail.ingredients.each do |ingredient| %>
+  <%= ingredient.dose %> - <%= ingredient %>
+<% end %>
+
+<%= link_to "Back to cocktails", cocktails_path %>
