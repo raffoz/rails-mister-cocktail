@@ -1,0 +1,55 @@
+.card-cocktails {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px;
+
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 1px white;
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.card{
+  li {
+  list-style: none;
+  padding: 0;
+  }
+  h5 {
+  font-weight: bold;
+  }
+}
+
+.button-create-back {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // padding: 0px 8px;
+}
+
+.dose-description-text {
+  font-weight: light;
+  color: gray;
+}
+
+.dose-one-line {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item {
+  text-align: right;
+  flex-grow: 1;
+}
+

@@ -1,9 +1,33 @@
-<h1>Add something to <%= @cocktail.name %></h1>
+<div class="container-fluid" id="image-cover-2">
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
-  <%= f.submit class: 'btn btn-primary' %>
-<% end %>
+  <div class="row wrapper">
+  </div>
 
-<%= link_to "Back to " + @cocktail.name, cocktail_path(@cocktail) %>
+  <div class="row mx-5">
+
+    <div class="col-12 col-md-5 col-lg-7">
+    </div>
+
+    <div class="col-12 col-md-7 col-lg-5 justify-content-center">
+      <div class="card" style="width: 21rem;">
+        <%= image_tag "dose.jpg", class: "card-img-top", title: "New cocktail", alt: "New cocktail" %>
+        <!-- <img class="card-img-top" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg" alt="Card image cap"> -->
+        <div class="card-body">
+          <h5 class="card-title"><%= @cocktail.name %></h5>
+
+          <%= simple_form_for [@cocktail, @dose] do |f| %>
+            <%= f.input :description %>
+            <%= f.association :ingredient, collection: Ingredient.order('name ASC') %>
+            <div class="button-create-back mt-4">
+              <%= f.submit class: 'btn btn-primary' %>
+              <%= link_to "Back to cocktail", cocktail_path(@cocktail), class: "btn btn-secondary" %>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+    </div>
+
+</div>
+
+

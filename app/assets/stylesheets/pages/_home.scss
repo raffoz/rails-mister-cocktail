@@ -1,19 +1,25 @@
 // Specific CSS for your home-page
 
-// #image-cover {
-//   background-image: asset-url('cover.jpg');
-//   height: 100vh;
-//   background-size: cover;
-//   // /* Center and scale the image nicely */
-//   background-position: center;
-//   background-repeat: no-repeat;
-// }
+#image-cover-1 {
+  background-image: asset-url('cover-1.jpg');
+  height: 100vh;
+  background-size: cover;
+  // /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; // image doesn't scroll
+}
 
-// .container {
-//   width: 800px;
-// }
+#image-cover-2 {
+  background-image: asset-url('cover-2.jpg');
+  height: 100vh;
+  background-size: cover;
+  // /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; // image doesn't scroll
+}
 
-// h1 {
-//   font-weight: bold;
-//   color: white;
-// }
+.wrapper {
+  height: 25vh;
+}

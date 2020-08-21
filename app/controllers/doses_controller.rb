@@ -14,7 +14,7 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(@cocktail)
     else
-      render :new
+      render :new # what to do if already exist that ingredient?
     end
   end
 

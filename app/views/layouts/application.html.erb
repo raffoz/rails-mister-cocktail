@@ -12,7 +12,26 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body id="image-cover">
-    <%= yield %>
+  <body>
+    <div>
+      <!-- navbar -->
+      <div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+
+        <!-- logo text -->
+        <%= link_to cocktails_path, class: "navbar-brand ml-3" do %>
+          <%= image_tag "text-blue.svg", title: "Mr Cocktail" %>
+        <% end %>
+
+        <!-- logo image -->
+        <%= image_tag "bartender.svg", class: "nav-brand dropdown-toggle logo mr-3", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Create a new cocktail", new_cocktail_path, class: "dropdown-item" %>
+          <%= link_to "All cocktails", cocktails_path, class: "dropdown-item" %>
+        </div>
+      </div>
+
+      <%= yield %>
+
+    </div>
   </body>
 </html>

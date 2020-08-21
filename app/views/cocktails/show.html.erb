@@ -1,13 +1,44 @@
-<h1><%= @cocktail.name %></h1>
+<div class="container-fluid" id="image-cover-2">
 
-<% @cocktail.doses.each do |dose| %>
-  <li>
-    <%= dose.ingredient.name %> - <%= dose.description %>
-    <%= link_to "Delete",
-                dose_path(dose),
-                method: :delete %>
-  </li>
-<% end %>
+  <div class="row wrapper">
+  </div>
 
-<%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %>
-<%= link_to "Back to cocktails", cocktails_path %>
+  <div class="row mx-5">
+    <div class="col-12 col-md-5 col-lg-7">
+    </div>
+
+    <div class="col-12 col-md-7 col-lg-5 justify-content-center">
+      <div class="card" style="width: 21rem;">
+        <img class="card-img-top" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%= @cocktail.name %></h5>
+
+          <% @cocktail.doses.each do |dose| %>
+            <li>
+              <div class="dose-one-line">
+                <span>
+                  <%= dose.ingredient.name + " " %>
+                </span>
+                <span class="dose-description-text">
+                  <%= "(" + dose.description + ")" %>
+                </span>
+                <span class="item">
+                  <%= link_to dose_path(dose),
+                              method: :delete  do %>
+                              <i class="far fa-trash-alt"></i>
+                  <% end %>
+                </span>
+              </div>
+            </li>
+          <% end %>
+
+          <div class="button-create-back mt-4">
+            <%= link_to "Add a dose", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+            <%= link_to "Back to cocktails", cocktails_path, class: "btn btn-secondary" %>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+</div>

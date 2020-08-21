@@ -1,11 +1,25 @@
-<div class="container">
-  <h1>Cocktails</h1>
+<div class="container-fluid" id="image-cover-2">
 
-  <% @cocktails.each do |cocktail| %>
-    <li>
-      <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    </li>
-  <% end %>
+  <div class="row wrapper">
+  </div>
+
+  <div class="row mx-5">
+    <% @cocktails.sort_by(&:name).each do |cocktail| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card-cocktails" style="background-image: url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
 </div>
 
-<%= link_to "Create a new cocktail", new_cocktail_path %>
+<!-- <h1>Cocktails</h1>
+  <% @cocktails.each do |cocktail| %>
+  <li>
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+  </li>
+<% end %>
+<%= link_to "Create a new cocktail", new_cocktail_path %> -->
+
