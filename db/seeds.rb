@@ -14,18 +14,25 @@ url = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 serialized_ingredients = RestClient.get(url)
 ingredients = JSON.parse(serialized_ingredients)
 
-count = 0
+# count = 0
 
-until count == 20 do
-  ingredient = ingredients["drinks"].sample.values.first
-  ingredient = Ingredient.new(name: ingredient)
+# until count == 20 do
+#   ingredient = ingredients["drinks"].sample.values.first
+#   ingredient = Ingredient.new(name: ingredient)
 
-  if ingredient.valid?
-    ingredient.save
-    puts ingredient.name
-    count += 1
-  else
-  end
+#   if ingredient.valid?
+#     ingredient.save
+#     puts ingredient.name
+#     count += 1
+#   else
+#   end
+# end
+
+# byebug
+
+final_ingredients = ingredients["drinks"]
+final_ingredients.each do |ingredient|
+  Ingredient.create(name: ingredient.values)
 end
 
-puts "Done with 20 different ingredients :)"
+puts "Done with #{final_ingredients.count} different ingredients :)"
