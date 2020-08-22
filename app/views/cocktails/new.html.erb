@@ -13,10 +13,12 @@
 
     <div class="col-12 col-md-7 col-lg-5 justify-content-center">
       <div class="card" style="width: 21rem;">
+        <!--
         <%= image_tag "create.jpg", class: "card-img-top", title: "New cocktail", alt: "New cocktail" %>
+         -->
         <!-- <img class="card-img-top" src="create.jpg" alt="Card image cap"> -->
         <div class="card-body">
-          <h5 class="card-title">What is the name?</h5>
+          <h5 class="card-title">Name of the cocktail</h5>
 
           <%= simple_form_for(@cocktail) do |f| %>
             <%= f.input :name %>

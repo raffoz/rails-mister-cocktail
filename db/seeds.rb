@@ -32,7 +32,7 @@ ingredients = JSON.parse(serialized_ingredients)
 
 final_ingredients = ingredients["drinks"]
 final_ingredients.each do |ingredient|
-  Ingredient.create(name: ingredient.values)
+  Ingredient.create(name: ingredient.values.first)
 end
 
 puts "Done with #{final_ingredients.count} different ingredients :)"
