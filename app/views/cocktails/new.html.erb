@@ -22,6 +22,7 @@
 
           <%= simple_form_for(@cocktail) do |f| %>
             <%= f.input :name %>
+            <%= f.input :photo, label: "Add a photo", as: :file %>
             <div class="button-create-back mt-4">
               <%= f.submit class: 'btn btn-primary' %>
               <%= link_to "Home", cocktails_path, class: "btn btn-secondary" %>
