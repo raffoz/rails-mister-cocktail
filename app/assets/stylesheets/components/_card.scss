@@ -55,6 +55,11 @@
   align-items: center;
 }
 
+.title-one-line {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .item {
   text-align: right;
   flex-grow: 1;
